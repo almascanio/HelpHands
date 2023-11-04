@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debito/Credito</title>
+    <link rel="shortcut icon" href="./HelpHands/imagen/Imagen de WhatsApp 2023-07-31 a las 11.11.28.jpg" type="image/x-icon">
+
+
+    <link rel="shortcut icon" href="./imagen/Imagen de WhatsApp 2023-07-31 a las 11.11.28.jpg" type="image/x-icon">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+    <link rel="stylesheet" href="././HelpHands/css/debitoCredito.css">
+
+
+</head>
+<body>
+    
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav_title">Help Hands.</h2>
+            </div>
+
+            <ul class="nav_link  nav_link-menu">
+                <li class="nav_items"> <a href="index.html" class="nav_links">Inicio</a></li>
+                <li class="nav_items"> <a href="index.html" class="nav_links">Quiénes somos</a></li>
+                <li class="nav_items"> <a href="#" class="nav_links">Qué hacemos</a></li>
+                <li class="nav_items"> <a href="novedades.html" class="nav_links">Novedades</a></li>
+
+                <img src="../imagen/close.svg" class="nav_close">
+            </ul>
+
+            <div class="nav_menu">
+                <img src="../imagen/menu.svg" class="nav_img">
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+
+            <div class="containerForm">
+        
+                <h1>Formulario de Pago</h1>
+                <form id="payment-form">
+                    
+                <label for="nombre">Nombre del titular de la tarjeta:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            
+                <label for="tarjeta">Tipo de Tarjeta:</label>
+                <select id="tarjeta" name="tarjeta" required>
+                    <option value="">Seleccione una tarjeta</option>
+                
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                </select>
+            
+                <label for="numero-tarjeta">Número de tarjeta:</label>
+                <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
+            
+                <label for="fecha-expiracion">Fecha de Expiración:</label>
+                <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/YY" required>
+
+                <label for="cvv">Codigo de Seguridad (CVV):</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit">Pagar</button>
+                </form>
+    
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <section class="footer_containers container">
+            <nav class="nav nav--footer">
+                <h2 class="footer_title">Help Hands.</h2>
+                <ul class="nav_link nav_link--footer">  
+                    <li class="nav_items"> <a href="index.html" class="nav_links">Inicio</a></li>
+                    <li class="nav_items"> <a href="index.html" class="nav_links">Quiénes somos</a></li>
+                    <li class="nav_items"> <a href="#" class="nav_links">Qué hacemos</a></li>
+                    <li class="nav_items"> <a href="novedades.html" class="nav_links">Novedades</a></li>
+                </ul>
+            </nav>
+
+            <form class="footer_form">
+                <h2 class="footer_newsletter">Suscribite</h2>
+                <div class="footer_inputs">
+                    <input type="email" placeholder="Email:" class="footer_input">
+                    <input type="submit" value="Registrate" class="footer_submit">
+                </div>
+            </form>
+        </section>
+
+        <section class="footer_copy container">
+            <div class="footer_social">
+                <a href="#" class="footer_icon"><img src="./HelpHands/imagen/facebook.svg" class="footer_img"></a>
+                <a href="#" class="footer_icon"><img src="./HelpHands/imagen/twitter.svg" class="footer_img"></a>
+                <a href="#" class="footer_icon"><img src="./HelpHands/imagen/youtube.svg" class="footer_img"></a>
+            </div>
+
+            <h3 class="footer_copyright">Derechos reservados &copy; HelpHands</h3>
+
+        </section>
+    </footer>
+
+    <script src="./HelpHands/js/debitoCredito.js"></script>
+
+
+
+
+
+</body>
+</html>
