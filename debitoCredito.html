@@ -4,116 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debito/Credito</title>
-    <link rel="shortcut icon" href="./HelpHands/imagen/Imagen de WhatsApp 2023-07-31 a las 11.11.28.jpg" type="image/x-icon">
-
-
     <link rel="shortcut icon" href="./imagen/Imagen de WhatsApp 2023-07-31 a las 11.11.28.jpg" type="image/x-icon">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
-    <link rel="stylesheet" href="././HelpHands/css/debitoCredito.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/debitoCredito.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
-    
 
     <header class="hero">
-        <nav class="nav container">
+        <nav class="nav_container">
             <div class="nav_logo">
-                <h2 class="nav_title">Help Hands.</h2>
+                <img id="logo" src="./imagen/Logo-Help-Hands1.png" alt="Logo">
             </div>
 
             <ul class="nav_link  nav_link-menu">
-                <li class="nav_items"> <a href="index.html" class="nav_links">Inicio</a></li>
-                <li class="nav_items"> <a href="index.html" class="nav_links">Quiénes somos</a></li>
-                <li class="nav_items"> <a href="#" class="nav_links">Qué hacemos</a></li>
-                <li class="nav_items"> <a href="novedades.html" class="nav_links">Novedades</a></li>
-
-                <img src="../imagen/close.svg" class="nav_close">
+                <li class="nav_items_header"> <a href="./index.html" class="nav_links_header">Inicio</a></li>
+                <li class="nav_items_header"> <a href="./index.html" class="nav_links_header">Quiénes somos</a></li>
+                <li class="nav_items_header"> <a href="#" class="nav_links_header">Qué hacemos</a></li>
+                <li class="nav_items_header"> <a href="./novedades.html" class="nav_links_header">Novedades</a></li>
+                
+                <form  class="search" action="">
+                    <input class="search-input" type="search" required>
+                    <i class="bi bi-search-heart icon_search"></i>
+                    <a class="search-a" href="javascript:void(0)" id="clear-btn">Clear</a>
+                </form>
+                
+                <img src="./imagen/close.svg" class="nav_close">
             </ul>
 
             <div class="nav_menu">
-                <img src="../imagen/menu.svg" class="nav_img">
+                <img src="./imagen/menu.svg" class="nav_img">
             </div>
         </nav>
-
     </header>
-
-    <main>
-        <section>
-
-            <div class="containerForm">
         
-                <h1>Formulario de Pago</h1>
-                <form id="payment-form">
-                    
-                <label for="nombre">Nombre del titular de la tarjeta:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            
-                <label for="tarjeta">Tipo de Tarjeta:</label>
-                <select id="tarjeta" name="tarjeta" required>
-                    <option value="">Seleccione una tarjeta</option>
-                
-                    <option value="visa">Visa</option>
-                    <option value="mastercard">MasterCard</option>
-                </select>
-            
-                <label for="numero-tarjeta">Número de tarjeta:</label>
-                <input type="text" id="numero-tarjeta" name="numero-tarjeta" required>
-            
-                <label for="fecha-expiracion">Fecha de Expiración:</label>
-                <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="MM/YY" required>
 
-                <label for="cvv">Codigo de Seguridad (CVV):</label>
-                <input type="text" id="cvv" name="cvv" required>
+    <main class="main_formulario">
 
-                <button type="submit">Pagar</button>
-                </form>
-    
-            </div>
-        </section>
+        <div class="formulario">
+
+            <form action="" id="miFormulario">
+        
+                <div class="row">
+        
+                    <div class="col">
+        
+                        <h3 class="title">Debito / Credito</h3>
+        
+                        <div class="inputBox">
+                            <span>Nombre y Apellido :</span>
+                            <input type="text" placeholder="Juan Perez" id="nombreApellido">
+                        </div>
+                        <div class="inputBox">
+                            <span>Email :</span>
+                            <input type="email" placeholder="@gmail.com" id="email">
+                        </div>
+                        <div class="inputBox">
+                            <span>Direccion :</span>
+                            <input type="text" placeholder="CRA" id="direccion">
+                        </div>
+                        <div class="inputBox">
+                            <span>Localidad :</span>
+                            <input type="text" placeholder="Buenos Aires" id="localidad">
+                        </div>
+        
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Pais :</span>
+                                <input type="text" placeholder="Argentina" id="pais">
+                            </div>
+                            <div class="inputBox">
+                                <span>Codigo Postal :</span>
+                                <input type="text" placeholder="123" id="codigoPostal">
+                            </div>
+                        </div>
+        
+                    </div>
+        
+                    <div class="col">
+        
+                        <h3 class="title">Pago</h3>
+        
+                        <div class="inputBox">
+                            <span>Tarjetas Aceptadas :</span>
+                            <img src="./imagen/card_img.png" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>Nombre de la Tarjeta :</span>
+                            <input type="text" placeholder="Nombre como figura en la tarjeta" id="nombreTarjeta">
+                        </div>
+                        <div class="inputBox">
+                            <span>Numero de la Tarjeta :</span>
+                            <input type="number" placeholder="1111-2222-3333-4444" id="numeroTarjeta">
+                        </div>
+                        <div class="inputBox">
+                            <span>Mes de Expiracion :</span>
+                            <input type="text" placeholder="01/10" id="mesExpiracion">
+                        </div>
+        
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Año de Expiracion :</span>
+                                <input type="number" placeholder="2027" id="anioExpiracion">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="123" id="cvv">
+                            </div>
+                        </div>
+        
+                    </div>
+            
+                </div>
+        
+                <input type="submit" value="Abonar" class="submit-btn">
+        
+            </form>
+        
+        </div>
     </main>
+
+    <script>
+        document.getElementById('miFormulario').addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (validarFormulario()) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Formulario válido',
+                    text: 'Puedes enviar los datos.'
+                }).then((result) => {
+            
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de validación',
+                    text: 'Por favor, completa todos los campos correctamente.'
+                });
+            }
+        });
+    
+        function validarFormulario() {
+            var nombreApellido = document.getElementById('nombreApellido').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var direccion = document.getElementById('direccion').value.trim();
+            var localidad = document.getElementById('localidad').value.trim();
+            var pais = document.getElementById('pais').value.trim();
+            var codigoPostal = document.getElementById('codigoPostal').value.trim();
+    
+            var nombreTarjeta = document.getElementById('nombreTarjeta').value.trim();
+            var numeroTarjeta = document.getElementById('numeroTarjeta').value.trim();
+            var mesExpiracion = document.getElementById('mesExpiracion').value.trim();
+            var anioExpiracion = document.getElementById('anioExpiracion').value.trim();
+            var cvv = document.getElementById('cvv').value.trim();
+    
+            // Verificar campos obligatorios
+            if (nombreApellido === '' || email === '' || direccion === '' || localidad === '' || pais === '' || codigoPostal === '' ||
+                nombreTarjeta === '' || numeroTarjeta === '' || mesExpiracion === '' || anioExpiracion === '' || cvv === '') {
+                return false;
+            }
+    
+            // Verificar formato de email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de validación',
+                    text: 'Por favor, ingresa un correo electrónico válido.'
+                });
+                return false;
+            }
+    
+            // Verificar formato de tarjeta y CVV
+            var tarjetaRegex = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+            var cvvRegex = /^\d{3}$/;
+            if (!tarjetaRegex.test(numeroTarjeta)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de validación',
+                    text: 'Por favor, ingresa un número de tarjeta válido (formato: 1111-2222-3333-4444).'
+                });
+                return false;
+            }
+            if (!cvvRegex.test(cvv)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de validación',
+                    text: 'Por favor, ingresa un CVV válido (formato: 123).'
+                });
+                return false;
+            }
+    
+            // Verificar fecha de expiración
+            var fechaExpiracion = new Date(anioExpiracion, mesExpiracion - 1, 1);
+            var fechaActual = new Date();
+            if (fechaExpiracion < fechaActual) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de validación',
+                    text: 'La tarjeta ha expirado. Por favor, ingresa una tarjeta válida.'
+                });
+                return false;
+            }
+    
+            // Todas las validaciones pasaron
+            return true;
+        }
+    </script>
+    
 
 
     <footer class="footer">
-        <section class="footer_containers container">
-            <nav class="nav nav--footer">
-                <h2 class="footer_title">Help Hands.</h2>
-                <ul class="nav_link nav_link--footer">  
-                    <li class="nav_items"> <a href="index.html" class="nav_links">Inicio</a></li>
-                    <li class="nav_items"> <a href="index.html" class="nav_links">Quiénes somos</a></li>
-                    <li class="nav_items"> <a href="#" class="nav_links">Qué hacemos</a></li>
-                    <li class="nav_items"> <a href="novedades.html" class="nav_links">Novedades</a></li>
-                </ul>
-            </nav>
-
-            <form class="footer_form">
-                <h2 class="footer_newsletter">Suscribite</h2>
-                <div class="footer_inputs">
-                    <input type="email" placeholder="Email:" class="footer_input">
-                    <input type="submit" value="Registrate" class="footer_submit">
+            <section class="footer_containers container">
+                <nav class="nav nav--footer">
+                    <div class="footer_logo">
+                        <img class="logo" src="./imagen/Logo-Help-Hands1.png" alt="">
+                    </div>
+                    <ul class="nav_link nav_link--footer">
+                        <li class="nav_items"> <a href="index.html" class="nav_links">Inicio</a></li>
+                        <li class="nav_items"> <a href="index.html" class="nav_links">Quiénes somos</a></li>
+                        <li class="nav_items"> <a href="#" class="nav_links">Qué hacemos</a></li>
+                        <li class="nav_items"> <a href="novedades.html" class="nav_links">Novedades</a></li>
+                    </ul>
+                </nav>
+    
+                <form class="footer_form">
+                    <h2 class="footer_newsletter">Suscribirse:</h2>
+                    <div class="footer_inputs">
+                        <input type="email" placeholder="Email:" class="footer_input">
+                        <input type="submit" value="Registrate" class="footer_submit">
+                    </div>
+                </form>
+            </section>
+    
+            <section class="footer_copy container">
+                <div class="footer_social">
+                    <a href="https://www.facebook.com/profile.php?id=61553784456777" class="icon_social"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/donacioneshelphands/" class="icon_social"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/help-hands-/" target="_blank" class="icon_social"><i class="bi bi-linkedin"></i></a>
                 </div>
-            </form>
-        </section>
+            
+    
+                <h3 class="footer_copyright">Derechos reservados &copy; HelpHands</h3>
+    
+            </section>
+        </footer>
 
-        <section class="footer_copy container">
-            <div class="footer_social">
-                <a href="#" class="footer_icon"><img src="./HelpHands/imagen/facebook.svg" class="footer_img"></a>
-                <a href="#" class="footer_icon"><img src="./HelpHands/imagen/twitter.svg" class="footer_img"></a>
-                <a href="#" class="footer_icon"><img src="./HelpHands/imagen/youtube.svg" class="footer_img"></a>
-            </div>
-
-            <h3 class="footer_copyright">Derechos reservados &copy; HelpHands</h3>
-
-        </section>
-    </footer>
-
-    <script src="./HelpHands/js/debitoCredito.js"></script>
-
-
-
-
+    <script src="./js/debitoCredito.js"></script>
 
 </body>
 </html>

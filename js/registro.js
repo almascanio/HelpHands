@@ -1,24 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("registro-form");
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+registerLink.addEventListener('click', () => {
+    wrapper.classList.add('active');
+});
 
-        const nombre = document.getElementById("nombre").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const confirmarPassword = document.getElementById("confirmar-password").value;
-
-        if (password !== confirmarPassword) {
-            alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
-            return;
-        }
-
-        console.log("Nombre: " + nombre);
-        console.log("Email: " + email);
-        console.log("Contraseña: " + password);
-
-        // Limpia el formulario
-        form.reset();
-    });
+loginLink.addEventListener('click', () => {
+    wrapper.classList.remove('active');
 });
