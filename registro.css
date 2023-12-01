@@ -210,6 +210,7 @@ nav{
     border: none;
     outline: none;
     border-radius: 30px;
+    text-transform: uppercase;
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
